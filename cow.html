@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cow Info - Go Vigyan Anusandhan Kendra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Go Vigyan Anusandhan Kendra</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tour.html">Shop Tour</a></li>
+                <li><a href="machines.html">Machines Info</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="cow.html">Cow Info</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>Cow Info</h2>
+
+            
+            <div class="cow-info" id="cow-list">
+                <!-- Cow cards will be loaded here -->
+            </div>
+
+            <button class="btn-primary" onclick="openModal('cow-modal')">Learn More</button>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="cow-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cow-modal')">&times;</span>
+            <h3>Cow Welfare</h3>
+            <p>We follow strict animal welfare guidelines, ensuring our cows have ample space, clean water, and proper shelter.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Go Vigyan Anusandhan Kendra. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+
+    <!-- ✅ Added Script for Cow Cards -->
+    <script>
+        const cows = [
+            {
+                name: "Gauri",
+                image: "DSCN1070.JPG",
+                breed: "Holstein-Friesian",
+                health: "Healthy",
+                milk: "7 liters/day",
+                illness: "None",
+                treatment: "Not required"
+            },
+            {
+                name: "Lakshmi",
+                image: "DSCN1065.JPG",
+                breed: "Jersey",
+                health: "Under Treatment",
+                milk: "5 liters/day",
+                illness: "Fever",
+                treatment: "Antibiotics + Vet Monitoring"
+            }
+        ];
+
+        const cowList = document.getElementById("cow-list");
+
+        cows.forEach(cow => {
+            const cowCard = document.createElement("div");
+            cowCard.classList.add("info-section", "fade-in");
+
+            cowCard.innerHTML = `
+                <img src="${cow.image}" alt="${cow.name}" style="width:100%; border-radius:10px; margin-bottom:10px;">
+                <h3>${cow.name}</h3>
+                <p><strong>Breed:</strong> ${cow.breed}</p>
+                <p><strong>Health:</strong> ${cow.health}</p>
+                <p><strong>Milk Production:</strong> ${cow.milk}</p>
+                <p><strong>Illness:</strong> ${cow.illness}</p>
+                <p><strong>Treatment:</strong> ${cow.treatment}</p>
+            `;
+
+            cowList.appendChild(cowCard);
+        });
+    </script>
+</body>
+</html>
