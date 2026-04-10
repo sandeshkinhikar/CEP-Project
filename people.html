@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Behind - Go Vigyan Anusandhan Kendra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">🐄 Go Vigyan Anusandhan Kendra</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tour.html">Shop Tour</a></li>
+                <li><a href="machines.html">Machines Info</a></li>
+                <li><a href="people.html">People Behind</a></li>
+                <li><a href="cow.html">Cow Info</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>People Behind👥</h2>
+
+            <div class="people-grid">
+
+                <!-- Person 1 -->
+                <div class="person-card fade-in" onclick="openModal('person1')">
+                    <img src="Photo 1.png">
+                    <h3>Asha Tai</h3>
+                    <p>Worker</p>
+                </div>
+
+                <!-- Person 2 -->
+                <div class="person-card fade-in" onclick="openModal('person2')">
+                    <img src="Photo 3.png">
+                    <h3>Radha Tai</h3>
+                    <p>Guide</p>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Modals -->
+
+    <!-- Person 1 -->
+    <div id="person1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('person1')">&times;</span>
+            <h3>Asha Tai</h3>
+            <p><strong>Role:</strong> Worker</p>
+            <p><strong>Working Since:</strong> 2012</p>
+            <p>Has 16+ years experience in medicine production and quality control of the medicinal products.</p>
+
+            <video width="100%" controls>
+                <source src="Video 1.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- Person 2 -->
+    <div id="person2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('person2')">&times;</span>
+            <h3>Radha Tai</h3>
+            <p><strong>Role:</strong> Guide</p>
+            <p><strong>Working Since:</strong> 2010</p>
+            <p>Responsible for guiding visitors and providing information about the farm and machinesand their processes.</p>
+
+            <video width="100%" controls>
+                <source src="Video 2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Go Vigyan Anusandhan Kendra. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
