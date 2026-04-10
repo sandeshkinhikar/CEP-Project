@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machines Info - Go Vigyan Anusandhan Kendra</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Go Vigyan Anusandhan Kendra</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tour.html">Shop Tour</a></li>
+                <li><a href="machines.html">Machines Info</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="cow.html">Cow Info</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>Machines Info</h2>
+            <div class="machine-grid">
+                <div class="machine-item fade-in">
+                    <img src="images/Cow dung crusher.png" alt="Cow Dung Crusher">
+                    <h3>Cow Dung Crusher</h3>
+                    <p>Our Cow Dung Crusher efficiently processes raw cow dung into a uniform consistency for use in various agricultural and medicinal products.</p>
+                </div>
+                <div class="machine-item fade-in">
+                    <img src="images/Gomutra (1).png" alt="Gomutra Distillation">
+                    <h3>Gomutra Distillation</h3>
+                    <p>High quality Gomutra distillation process ensuring absolute purity, extraction of beneficial compounds, and extended shelf life.</p>
+                </div>
+                <div class="machine-item fade-in">
+                    <img src="images/furnance.jpg" alt="Furnace">
+                    <h3>Furnace</h3>
+                    <p>A traditional heating structure used for large-scale boiling and processing of medicinal and
+                        dairy preparations.</p>
+                </div>
+                <div class="machine-item fade-in">
+                    <img src="images/storage.png" alt="Storage Room">
+                    <h3>Storage Room</h3>
+                    <p>A dedicated area for safely storing raw materials and processed goods in secure,
+                        quality-controlled containers.</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <button class="btn-primary" onclick="openModal('machine-modal')">Learn More</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="machine-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('machine-modal')">&times;</span>
+            <h3>Machine Maintenance</h3>
+            <p>All our machines undergo regular maintenance to ensure optimal performance and product quality.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Go Vigyan Anusandhan Kendra. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
